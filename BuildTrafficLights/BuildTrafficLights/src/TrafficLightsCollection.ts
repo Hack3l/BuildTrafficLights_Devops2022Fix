@@ -28,7 +28,7 @@ export class TrafficLightsCollection {
 
     public updateBuildState() {
         var buildClient = BuildRestClient.getClient();
-        buildClient.getBuilds(this.projectname, [this.buildDefinitionId], undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, this.numberOfBuilds).then((buildResults: Contracts.Build[]) => {
+        buildClient.getBuilds(this.projectname, [this.buildDefinitionId], undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, this.numberOfBuilds, undefined, Contracts.BuildQueryOrder.QueueTimeDescending).then((buildResults: Contracts.Build[]) => {
             this.builds = buildResults.sort((a, b) => {
                 return b.queueTime.getTime() - a.queueTime.getTime();
             });

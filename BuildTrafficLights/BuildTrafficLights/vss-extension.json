@@ -1,9 +1,11 @@
 {
   "manifestVersion": 1,
   "id": "BuildTrafficLights",
-  "version": "0.1.20",
+  "version": "0.1.21",
   "name": "Build Traffic Lights",
-  "scopes": [ "vso.build_execute" ],
+  "scopes": [
+    "vso.build_execute"
+  ],
   "description": "This extension allows you to add build traffic lights to your dashboard to visualize the state of a specific build definition and its builds.",
   "publisher": "4tecture",
   "public": true,
@@ -104,7 +106,9 @@
     {
       "id": "BuildTrafficLightsWidget.Configuration",
       "type": "ms.vss-dashboards-web.widget-configuration",
-      "targets": [ "ms.vss-dashboards-web.widget-configuration" ],
+      "targets": [
+        "ms.vss-dashboards-web.widget-configuration"
+      ],
       "properties": {
         "name": "Build Traffic Lights Widget Configuration",
         "description": "Configures Build Traffic Lights Widget",

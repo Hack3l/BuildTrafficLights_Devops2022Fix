@@ -1,18 +1,27 @@
 // A task runner configuration.
 {
-    "version": "0.1.0",
+    "version": "2.0.0",
     "command": "grunt",
-    "isShellCommand": true,
     "tasks": [
-         {
-            "taskName": "ts:build",
-            "isBuildCommand": true,
-            "problemMatcher": "$msCompile"
-        },
       {
-        "taskName": "exec:package",
-        "isBuildCommand": true,
-        "problemMatcher": "$msCompile"
+        "label": "ts:build",
+        "type": "grunt",
+        "task": "ts:build",
+        "problemMatcher": "$msCompile",
+        "group": {
+          "_id": "build",
+          "isDefault": false
+        }
+      },
+      {
+        "label": "exec:package",
+        "type": "grunt",
+        "task": "exec:package",
+        "problemMatcher": "$msCompile",
+        "group": {
+          "_id": "build",
+          "isDefault": false
+        }
       }
     ]
 }
